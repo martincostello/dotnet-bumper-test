@@ -7,7 +7,6 @@
     </AssemblyAttribute>
   </ItemGroup>
   <PropertyGroup>
-    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
     <AnalysisMode>All</AnalysisMode>
     <AssemblyOriginatorKeyFile>$(MSBuildThisFileDirectory)Application.snk</AssemblyOriginatorKeyFile>
     <Authors>martin_costello</Authors>
@@ -28,18 +27,11 @@
     <MSBuildTreatWarningsAsErrors>true</MSBuildTreatWarningsAsErrors>
     <NeutralLanguage>en-US</NeutralLanguage>
     <Nullable>enable</Nullable>
-    <PackageIcon></PackageIcon>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/martincostello/dotnet-bumper-test</PackageProjectUrl>
-    <PackageReadmeFile>package-readme.md</PackageReadmeFile>
-    <PackageReleaseNotes>See $(PackageProjectUrl)/releases for details.</PackageReleaseNotes>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>$(PackageProjectUrl).git</RepositoryUrl>
     <SignAssembly>true</SignAssembly>
     <PublicSign Condition=" '$(OS)' != 'Windows_NT' AND '$(SignAssembly)' == 'true' ">true</PublicSign>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <VersionPrefix>1.0.0</VersionPrefix>
   </PropertyGroup>
@@ -61,10 +53,4 @@
     <ExcludeByAttribute>GeneratedCodeAttribute</ExcludeByAttribute>
     <Threshold></Threshold>
   </PropertyGroup>
-  <ItemGroup Condition=" '$(PackageIcon)' != '' ">
-    <None Include="$(MSBuildThisFileDirectory)$(PackageIcon)" Pack="True" PackagePath="" />
-  </ItemGroup>
-  <ItemGroup Condition=" '$(PackageReadmeFile)' != '' ">
-    <None Include="$(MSBuildThisFileDirectory)$(PackageReadmeFile)" Pack="True" PackagePath="" />
-  </ItemGroup>
 </Project>
